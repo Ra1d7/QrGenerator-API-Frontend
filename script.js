@@ -2,6 +2,7 @@ const input = document.querySelector('input[type="text"]');
 const button = document.querySelector('button');
 const qrCodeImg = document.getElementById('qr-code');
 const downloadBtn = document.getElementById('download-btn');
+const downloadlink = document.getElementById('dwnpath');
 
 // Initially hide the image and download button
 qrCodeImg.style.display = 'none';
@@ -25,6 +26,7 @@ button.addEventListener('click', async () => {
       downloadBtn.style.display = 'inline';
       downloadBtn.setAttribute('href', url);
       downloadBtn.setAttribute('download', 'QRimg.png');
+	downloadlink.setAttribute('href',url);
       console.log('Response:', response);
 	document.getElementById("textbox1").value = "";
     } catch (error) {
