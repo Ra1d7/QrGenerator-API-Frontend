@@ -15,7 +15,7 @@ public class QrController : ControllerBase
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.Q);
             PngByteQRCode qrCode = new PngByteQRCode(qrCodeData);
-            byte[] qrCodeAsPngBytes = qrCode.GetGraphic(20);
+            byte[] qrCodeAsPngBytes = qrCode.GetGraphic(20)d;
             Random rnd = new Random();
             int random = rnd.Next(2000, 20000);
             int tenPercent = data.Length / 10;
